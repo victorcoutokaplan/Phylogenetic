@@ -26,6 +26,7 @@ def getRawSequencesFromTree(tree, seqLenInput, initial_size_Var, mu_Var, recombi
     for pop in real_dem.populations:
         if pop.name[0] != 'p':
             TtoIdMap[pop.id] = pop.name
+    print(TtoIdMap)
 
     samplesDict = {}
     for i in range(len(tree.leaf_nodes())):
