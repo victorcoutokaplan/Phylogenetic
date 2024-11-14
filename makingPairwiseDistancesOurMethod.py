@@ -27,7 +27,7 @@ def makeTimeAndSizeMatrix(dictionaryOfSequences, sequenceLengths):
 
     for seqKey1 in range(numberLeafNodes):
         for seqKey2 in range(seqKey1 + 1, numberLeafNodes):
-            print('working on inferring', seqKey1, seqKey2)
+            #print('working on inferring', seqKey1, seqKey2)
             #get curves
             curvesDict = findCurves(distList, distances, (seqKey1,seqKey2), sequenceLengths)
 
@@ -52,7 +52,7 @@ def computeDistancesForKCounts(kcounts, sequenceDictionary):
     kmerVectDict = {}
     for k in kcounts:
         for seqKey in range(numberLeafNodes):
-            print('in getting kmer vectors, working on k:', k, 'seq', seqKey)
+            #print('in getting kmer vectors, working on k:', k, 'seq', seqKey)
             kmerVectDict[(k, seqKey)] = getKMerVect(sequenceDictionary[seqKey], k, calcPossibleDict)
 
     for k in kcounts:
